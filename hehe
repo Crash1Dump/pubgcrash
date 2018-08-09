@@ -28,12 +28,14 @@ function lobby2()
 		'>bypass',
 		'>Аим 360 ', 
 		'>Аим 360 v2',
+		'>Аим 360 v3',
 		'Выход'
 	},nil,cdint) 
 		if TR == 1 then bypass5() end
 		if TR == 2 then AIM1() end
 		if TR == 3 then AIM2() end
-		if TR == 4 then gg.setVisible(true) os.exit()  end
+		if TR == 4 then AIM3() end
+		if TR == 5 then gg.setVisible(true) os.exit()  end
 end
 
 function AIM1()
@@ -49,8 +51,20 @@ end
 function AIM2()
 	gg.setRanges(gg.REGION_ANONYMOUS)
 	gg.clearResults()
-	gg.searchNumber("4,2038954e-45F;4,2459484e-40F;1,4012985e-45F;1,4012985e-45F;20 000,0F;5,0F;2,20000004768F;3,5F;1,0F;1,0F;1,0F;1,0F;0,5F;0,10000000149F;0,5F;0,80000001192F;0,80000001192F;200,0F;20,0F;100,0F;8 000,0F;20,0F::173", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-	gg.searchNumber("3.5;1;200;20", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+	gg.searchNumber("69", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+	gg.clearResults()
+	gg.searchNumber("3.5;1;200;20::69", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+	gg.getResults(300)
+	gg.editAll("-1.0e10", gg.TYPE_FLOAT)
+	gg.clearResults()
+	gg.toast("Аим 360° активирован!")
+end
+
+function AIM3()
+	gg.setRanges(gg.REGION_ANONYMOUS)
+	gg.clearResults()
+	gg.searchNumber("4.2038954e-45F;4.2459484e-40F;1.4012985e-45F;1.4012985e-45F;20 000.0F;5.0F;2.20000004768F;3.5F;1.0F;1.0F;1.0F;1.0F;0.5F;0.10000000149F;0.5F;0.80000001192F;0.80000001192F;200.0F;20.0F;100.0F;8 000.0F;20.0F::173", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+	gg.searchNumber("3.5F;1.0F;1.0F;1.0F;1.0F;200.0F;20.0F;20.0F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 	gg.getResults(300)
 	gg.editAll("-1.0e10", gg.TYPE_FLOAT)
 	gg.clearResults()
